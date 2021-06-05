@@ -1,0 +1,71 @@
+.wrapper {
+  padding: 2px 2px;
+
+}
+.wrapper h1 {
+  color: black;
+  text-align: center;
+}
+.wrap h1{
+  color: black;
+  text-align: center;
+}
+h4 {
+  color: black;
+  font-weight: bold;
+}
+
+
+.wrapper fieldset {
+  margin: 2px 0;
+}
+
+.wrapper fieldset label{
+  padding-right: 10px;
+}
+.wrapper  .check {
+  margin: 1px 0;
+  color: black;
+  font-size: 17px;
+}
+
+
+body {
+  background-color: #aec477;
+  padding: 10px;
+  font-family: monospace;
+  text-align: start;
+  
+}
+#textboxid {
+  height: 30px;
+  width: 350pt;
+}
+#b1 {
+  background-color: #4a958e;
+  border-radius: 0em;
+  padding: 0.2em 0.5em;
+  margin-right: 3px;
+
+}
+
+#b2 {
+  background-color: #cb3031;
+  border-radius: 0em;
+  padding: 0.2em 0.5em;
+}
+
+button {
+display:inline-block;
+padding:0.5em 1em;
+border-radius:0em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:monospace;
+font-weight:300;
+color:#FFFFFF;
+background-color:#1176b1;
+text-align:center;
+
+}
+
