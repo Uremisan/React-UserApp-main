@@ -26,8 +26,8 @@ componentDidMount(){//display all users when the component mounts
 }
 const mapStateToProps = (state) =>{
   return{
-  usersData: state.users
-}
+  usersData: state.userState.users,
+  };
 }
 
 const mapDispatchToProps = {
