@@ -4,7 +4,7 @@ import Dashboard from './pages/dashboard';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
-
+import ProtectedRoute from './Components/ProtectedRoute';
 
 class App extends React.Component{
 
@@ -12,7 +12,7 @@ class App extends React.Component{
     return (
       <BrowserRouter>
       <Switch>
-        <Route exact path ="/" component={Dashboard}></Route>
+        <ProtectedRoute path ="/" exact component={Dashboard}/>
         <Route path ="/login" component={Login}></Route>
         <Route path = "/signup" component={Signup}></Route>
       </Switch>

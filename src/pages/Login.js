@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import {Login} from '../actions/authActions';
 
 
@@ -22,7 +23,19 @@ class login extends React.Component {
     this.props.Login(this.state.email, this.state.password);
   }
 
-  render (){
+
+
+  render ()
+  {
+    if (this.props.auth.isLoaded === false)
+    {
+      return <h1>Page is Loading...</h1>
+    }
+  
+    if (this.props.auth.isEmpty === false) {
+      return <Redirect path = "/" />;
+    }
+
     return (
       <form>
         <h2>Log in</h2>
@@ -41,9 +54,17 @@ class login extends React.Component {
         </div>
       </form>
     )
-  }
+  };
 
 }
 
+
+
 const mapDispatchToProps = { Login };
-export default connect(null, mapDispatchToProps)(login);
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebaseState.auth,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(login);
