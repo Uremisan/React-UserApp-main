@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import {Login} from '../actions/authActions';
+import { Link } from 'react-router-dom';
 
 
 class login extends React.Component {
@@ -51,7 +52,9 @@ class login extends React.Component {
 
         <div>
         <br /><button type="button" onClick={this.handleSubmit}>Log in</button><br />
-        </div>
+        </div><br></br>
+        <h4>New here? Sign up for free</h4>
+        <h4><Link to = '/signup'>Signup</Link></h4>
       </form>
     )
   };
